@@ -69,7 +69,6 @@ const sampleProjects = [
     id: "proj-3",
     title: "Reactgram",
     desc: "O Reactgram é uma aplicação full-stack inspirada no Instagram, desenvolvida com React no frontend e Node.js + Express no backend, utilizando MongoDB como banco de dados. O projeto implementa autenticação, gerenciamento de usuários, publicação de fotos, curtidas e comentários, simulando funcionalidades reais de uma rede social moderna.",
-    // TODO: Adicione aqui o link do projeto (ex: github pages / repo / deployed)
     link: "https://github.com/RaphaelRosa74/Reactgram",
   },
 ];
@@ -155,7 +154,7 @@ function App() {
                 className="text-4xl md:text-6xl font-extrabold leading-tight"
               >
                 Olá, eu sou <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 to-violet-300">
+                <span className="bg-clip-text text-transparent bg-linear-to-r from-fuchsia-400 to-violet-300">
                   Raphael
                 </span>
               </motion.h1>
@@ -212,7 +211,7 @@ function App() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="rounded-2xl border border-white/6 bg-white/[0.02] p-6"
+                className="rounded-2xl border border-white/6 bg-white/2 p-6"
               >
                 <div className="text-sm text-slate-400">Função</div>
                 <div className="text-2xl font-bold mt-1">
@@ -237,7 +236,7 @@ function App() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="rounded-2xl border border-white/6 bg-white/[0.02] p-8 flex flex-col md:flex-row items-center justify-between gap-6"
+                className="rounded-2xl border border-white/6 bg-white/2 p-8 flex flex-col md:flex-row items-center justify-between gap-6"
               >
                 <div>
                   <h4 className="text-lg font-semibold">Vamos conversar?</h4>
@@ -284,9 +283,6 @@ function App() {
               <motion.button
                 key={s.id}
                 onClick={() => {
-                  // ao clicar em uma habilidade, você pode rolar para os projetos
-                  // e (opcional) filtrar os projetos relacionados.
-                  // TODO: Você pode futuramente filtrar projetos por habilidade
                   setTimeout(() => {
                     const el = document.querySelector("#projects");
                     if (el)
@@ -294,7 +290,7 @@ function App() {
                   }, 100);
                 }}
                 whileHover={{ scale: 1.02 }}
-                className="group text-left rounded-2xl border border-white/6 p-6 bg-white/[0.01] cursor-pointer"
+                className="group text-left rounded-2xl border border-white/6 p-6 bg-white/1 cursor-pointer"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -320,7 +316,7 @@ function App() {
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.12 * idx }}
-                className="block rounded-2xl border border-white/6 p-6 bg-white/[0.01] hover:bg-white/[0.03] hover:scale-[1.01] transition transform"
+                className="block rounded-2xl border border-white/6 p-6 bg-white/1 hover:bg-white/3 hover:scale-[1.01] transition transform"
               >
                 <div className="flex items-center justify-between">
                   <div className="font-semibold">{p.title}</div>
@@ -335,9 +331,6 @@ function App() {
           </div>
         </section>
       </main>
-
-      {/* CONTACT */}
-
       {/* FOOTER */}
       <footer className="border-t border-white/5">
         <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col items-center">
