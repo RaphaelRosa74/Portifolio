@@ -61,17 +61,16 @@ const sampleProjects = [
   },
   {
     id: "proj-2",
-    title: "Projeto Exemplo 2",
-    desc: "Breve descrição do projeto — substitua pelo seu.",
-    // TODO: Adicione aqui o link do projeto (ex: github pages / repo / deployed)
-    link: "#",
+    title: "Inside-Test",
+    desc: "Lista de Usuários com Hook Personalizado (useUsers) Este projeto é um exemplo prático de como utilizar React com um hook personalizado para buscar e gerenciar dados de uma API externa. Aqui utilizamos o endpoint público do JSONPlaceholder para simular a listagem de usuários",
+    link: "https://github.com/RaphaelRosa74/Inside-Test",
   },
   {
     id: "proj-3",
-    title: "Projeto Exemplo 3",
-    desc: "Breve descrição do projeto — substitua pelo seu.",
+    title: "Reactgram",
+    desc: "O Reactgram é uma aplicação full-stack inspirada no Instagram, desenvolvida com React no frontend e Node.js + Express no backend, utilizando MongoDB como banco de dados. O projeto implementa autenticação, gerenciamento de usuários, publicação de fotos, curtidas e comentários, simulando funcionalidades reais de uma rede social moderna.",
     // TODO: Adicione aqui o link do projeto (ex: github pages / repo / deployed)
-    link: "#",
+    link: "https://github.com/RaphaelRosa74/Reactgram",
   },
 ];
 
