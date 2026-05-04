@@ -5,5 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/Portifolio/",
+  base: "/Portifolio/", //add / no final de portifolio, porem localhost parou de funcionar
 });

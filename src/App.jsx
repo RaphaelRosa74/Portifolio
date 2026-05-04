@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, Menu, X, Github, Linkedin, Mail } from "lucide-react";
 
 const navLinks = [
+  { href: "#experience", label: "Experiência" },
   { href: "#skills", label: "Habilidades" },
   { href: "#projects", label: "Projetos" },
 ];
@@ -20,7 +21,7 @@ const skills = [
     label: "JavaScript",
     short: "JS",
     description:
-      "Desenvolvi habilidades em Python por meio de cursos e projetos pessoais disponíveis em meu GitHub, aprimorando a aplicação eficiente e estruturada de conceitos da linguagem.",
+      "Desenvolvi habilidades em JavaScript por meio de cursos e projetos pessoais disponíveis em meu GitHub, aprimorando a aplicação eficiente e estruturada de conceitos da linguagem.",
   },
   {
     id: "ts",
@@ -56,20 +57,33 @@ const sampleProjects = [
   {
     id: "proj-1",
     title: "Mini blog",
-    desc: "um pequeno blog onde podemos fazer posts variados",
+    desc: "Um mini blog desenvolvido em React com integração ao Firebase, onde usuários podem se cadastrar, autenticar, criar, visualizar, editar e deletar postagens. O projeto foi feito com foco em aprender e aplicar conceitos modernos do React, como hooks customizados, Context API, e boas práticas de organização de componentes.",
     link: "https://raphaelrosa74.github.io/miniblog/",
+    skills: "React, Firebase, CSS, Context API",
   },
   {
     id: "proj-2",
     title: "Inside-Test",
     desc: "Lista de Usuários com Hook Personalizado (useUsers) Este projeto é um exemplo prático de como utilizar React com um hook personalizado para buscar e gerenciar dados de uma API externa. Aqui utilizamos o endpoint público do JSONPlaceholder para simular a listagem de usuários",
     link: "https://github.com/RaphaelRosa74/Inside-Test",
+    skills: "Vite, CSS, React, Node",
   },
   {
     id: "proj-3",
     title: "Reactgram",
     desc: "O Reactgram é uma aplicação full-stack inspirada no Instagram, desenvolvida com React no frontend e Node.js + Express no backend, utilizando MongoDB como banco de dados. O projeto implementa autenticação, gerenciamento de usuários, publicação de fotos, curtidas e comentários, simulando funcionalidades reais de uma rede social moderna.",
     link: "https://github.com/RaphaelRosa74/Reactgram",
+    skills: "React, Node, MongoDB, Express, CSS, APIRest",
+  },
+];
+
+const profissinalExperience = [
+  {
+    id: "exp-1",
+    title: "Gabriel Sabbag – Psicólogo",
+    desc: "Landing page institucional desenvolvida em React, com foco em experiência do usuário, responsividade e organização escalável de componentes. O projeto foi construído utilizando Styled Components para estilização e Framer Motion para animações, garantindo uma interface moderna, fluida e profissional.",
+    link: "https://psigabrielsabbag.com/",
+    skills: "React, TypeScript, Styled Components",
   },
 ];
 
@@ -165,12 +179,10 @@ function App() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-6 text-slate-300 max-w-xl"
               >
-                Desenvolvedor Full Stack júnior, curioso por natureza e sempre
-                em busca de novos aprendizados. Gosto de transformar ideias em
-                soluções práticas e bem estruturadas, unindo design, lógica e
-                código limpo. Estou dando meus primeiros passos na área e
-                buscando oportunidades para crescer e contribuir com projetos
-                incríveis.
+                Transformo ideias em soluções eficientes, unindo lógica robusta
+                e código limpo. Curioso por natureza e em constante aprendizado,
+                crio aplicações estruturadas e funcionais. Pronto para agregar
+                valor e evoluir junto a um time de tecnologia.
               </motion.p>
               <div className="mt-8 flex items-center gap-4">
                 <motion.a
@@ -275,6 +287,35 @@ function App() {
             </div>
           </div>
         </section>
+        {/*Experiencia Profissional*/}
+        <section id="experience" className="mx-auto max-w-6xl px-4 py-12">
+          <h3 className="text-xl font-semibold mb-6">
+            Experiência Profissional
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {profissinalExperience.map((p, idx) => (
+              <motion.a
+                key={p.id}
+                href={p.link}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.12 * idx }}
+                className="block rounded-2xl border border-white/6 p-6 bg-white/1 hover:bg-white/3 hover:scale-[1.01] transition transform"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="font-semibold">{p.title}</div>
+                  <div className="text-sm text-slate-400">{/* tag */}</div>
+                </div>
+                <p className="mt-3 text-slate-300 text-sm">{p.desc}</p>
+                <div className="mt-4 flex items-center gap-3 text-sm text-slate-400">
+                  <span>{p.skills}</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </section>
+
         {/* HABILIDADES */}
         <section id="skills" className="mx-auto max-w-6xl px-4 py-12">
           <h3 className="text-xl font-semibold mb-4">Habilidades</h3>
@@ -304,7 +345,7 @@ function App() {
             ))}
           </div>
         </section>
-
+        {/*Projetos*/}
         <section id="projects" className="mx-auto max-w-6xl px-4 py-12">
           <h3 className="text-xl font-semibold mb-6">Projetos</h3>
 
@@ -324,7 +365,7 @@ function App() {
                 </div>
                 <p className="mt-3 text-slate-300 text-sm">{p.desc}</p>
                 <div className="mt-4 flex items-center gap-3 text-sm text-slate-400">
-                  <span>Fullstack</span>
+                  <span>{p.skills}</span>
                 </div>
               </motion.a>
             ))}
