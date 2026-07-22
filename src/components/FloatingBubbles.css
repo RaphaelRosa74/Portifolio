@@ -1,0 +1,34 @@
+.floating-bubble {
+  --bubble-fuchsia: hsl(292 84% 68% / 0.9);
+  --bubble-violet: hsl(262 83% 74% / 0.9);
+
+  animation-name: floatBubble;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes floatBubble {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(calc(var(--drift) * 0.6), -20vh) scale(1.05);
+  }
+  50% {
+    transform: translate(var(--drift), -45vh) scale(0.95);
+  }
+  75% {
+    transform: translate(calc(var(--drift) * 0.3), -70vh) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-bubble {
+    animation: none;
+    opacity: 0.15;
+  }
+}

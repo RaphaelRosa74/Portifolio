@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { FloatingBubbles } from "./components/FloatingBubbles";
 
 const navLinks = [
   { href: "#experience", label: "Experiência" },
@@ -99,7 +100,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white selection:bg-fuchsia-500/30">
+    <div className="min-h-screen text-white selection:bg-fuchsia-500/30">
+      <FloatingBubbles />
       {/* NAVBAR */}
       <header className="sticky top-0 border-b border-white/5 bg-slate-900 z-9">
         <div className="mx-auto max-w-6xl px-4 py-6 flex items-center justify-between ">
