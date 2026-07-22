@@ -86,6 +86,14 @@ const profissinalExperience = [
     link: "https://psigabrielsabbag.com/",
     skills: "React, TypeScript, Styled Components",
   },
+  {
+    id: "exp-2",
+    title: "Portal de Pesquisas Cadastrais",
+    desc: "Desenvolvi uma aplicação web para centralizar consultas cadastrais de empresas brasileiras, permitindo pesquisar informações como CNPJ, Inscrição Estadual e Simples Nacional em um único ambiente. O projeto foi pensado para oferecer uma navegação intuitiva, respostas rápidas e uma experiência organizada, facilitando o acesso a diferentes serviços de consulta.",
+    link: "https://raphaelrosa74.github.io/API_CNPJ/",
+    skills:
+      "React, TypeScript, Styled Components, TanStack Query, TanStack Router, Vite.",
+  },
 ];
 
 function App() {
